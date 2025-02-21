@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-black: #161616;
+    --spells-text: aliceblue;
+}
+
+body {
+    background-image: url('/public/hogwarts-legacy-dark.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-image: url('https: //youtu.be/8wu6PK1sdpc?si=dNuOR0DJiGezJXTe'); */
+    color: var(--spells-text);
+}
+
+/* HEADER-START */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vw;
+    padding: 0.5rem;
+}
+
+#header-title {
+    font-size: xx-large;
+    font-weight: bolder;
+    width: 100%;
+    color: #e1c735;
+}
+
+header a {
+    color: var(--spells-text);
+    text-decoration: none;
+}
+
+header ul {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    width: 100%;
+}
+
+/* HEADER-END */
+
+/* CONTENT-START */
+#content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 12rem;
+    margin-top: 13rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#content-title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 5rem;
+    font-weight: bold;
+    overflow-wrap: break-word;
+    letter-spacing: .7rem;
+    width: 100%;
+}
+
+
+
+/* CONTENT-END */
