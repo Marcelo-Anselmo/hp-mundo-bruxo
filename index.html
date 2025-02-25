@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="./assets/CSS/style.css" />
-    <script src="./assets/JS/main.js"></script>
+    <link type="image/png" sizes="96x96" rel="icon" href="./favicon/deathly-hallows-96-dark.png" />
+    <script src="./assets/JS/api.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- <script src="./assets/JS/api.js"></script> -->
     <title>Mundo HP</title>
@@ -13,25 +14,37 @@
   <body>
     <!-- HEADER-START -->
     <header>
-        <ul>
-            <li><a href="">Spells</a></li>
-            <li><a href="">Wizard World</a></li>
-            <div>
-              <h1 id="header-title">HP</h1>
-            </div>
-            <li><a href="">Potions</a></li>
-            <li><a href="">About</a></li>
-        </ul>
+      <ul>
+        <li><a href="">Spells</a></li>
+        <li><a href="">Wizard World</a></li>
+        <div>
+          <h1 id="header-title">HP</h1>
+        </div>
+        <li><a href="">Potions</a></li>
+        <li><a href="">About</a></li>
+      </ul>
     </header>
     <!-- HEADER-END -->
-    
+
     <!-- CONTENT-START -->
-     <section id="content">
-        <div id="content-texts">
-            <h2 id="content-title">Avada Kedavra</h2>
-            <p id="content-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum distinctio illo quis eius tempore.</p>
-        </div>
-     </section>
+    <section id="content">
+      <div id="content-texts">
+        <h2 id="content-title">Avada Kedavra</h2>
+        <p id="content-p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+          distinctio illo quis eius tempore.
+        </p>
+      </div>
+      <div class="cards">
+        <h2 id="card-title">Avada Kedavra</h2>
+        <p id="card-p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+          distinctio illo quis eius tempore.
+        </p>
+        <card-component></card-component>
+      </div>
+    </section>
     <!-- CONTENT-END -->
   </body>
+  <script src="/assets/JS/cards.js"></script>
 </html>
