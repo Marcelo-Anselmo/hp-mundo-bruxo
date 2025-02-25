@@ -1,24 +1,18 @@
-fetch('https://potterapi-fedeperin.vercel.app/pt/spells')
-    .then(res => res.json())
-    .then(json => carregaElementosPagina(json))
+let reqNum = 32;
 
-function carregaElementosPagina(json) {
-    const table = document.createElement('div')
-    for(let spells of json) {
-        const feiticoTitle = document.createElement('tr');
-        const feiticoDesc = document.createElement('tr');
+function fetchSpells() {
+    fetch(`https://potterapi-fedeperin.vercel.app/pt/spells?index=${reqNum}`)
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            let contentTitle = document.getElementById("content-title");
+            let contentDesc = document.getElementById("content-p");
+            
+            contentTitle.innerHTML = data.spell;
+            contentDesc.innerHTML = data.use;
+        });
+}
 
-        let feitico = document.createElement('h3');
-        let desc = document.createElement('p');
-        feitico.innerHTML = spells.spell;
-        desc.innerHTML = spells.use;
-        feiticoTitle.appendChild(feitico);
-        feiticoDesc.appendChild(desc);
-
-        table.appendChild(feiticoTitle);
-        table.appendChild(feiticoDesc);
-    }
-    
-    const resultado = document.querySelector('.resultado')
-    resultado.appendChild(table);
-};
+// Initial fetch
+fetchSpells();
