@@ -6,7 +6,7 @@
 
 :root {
     --main-bg-black: #161616;
-    --spells-text: aliceblue;
+    --spells-white-text: aliceblue;
 }
 
 body {
@@ -14,7 +14,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     /* background-image: url('https: //youtu.be/8wu6PK1sdpc?si=dNuOR0DJiGezJXTe'); */
-    color: var(--spells-text);
+    color: var(--spells-white-text);
 }
 
 /* HEADER-START */
@@ -35,7 +35,7 @@ header {
 }
 
 header a {
-    color: var(--spells-text);
+    color: var(--spells-white-text);
     text-decoration: none;
 }
 
@@ -71,6 +71,34 @@ header ul {
     width: 100%;
 }
 
-
-
 /* CONTENT-END */
+
+/* CARDS-START */
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: justify;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 30%;
+    height: 19rem;
+    padding: 0rem 2rem 0rem 2rem;
+    margin-top: 5rem;
+    border-radius: 1rem;
+    background-color: #303030c5;
+}
+
+#card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--spells-white-text);
+    margin-top: 1rem;
+}
+
+#card-p {
+    font-size: 1rem;
+    color: var(--spells-white-text);
+    margin-top: 1rem;
+}
+
+/* CARDS-END */
