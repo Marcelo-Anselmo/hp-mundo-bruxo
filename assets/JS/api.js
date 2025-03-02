@@ -1,24 +1,29 @@
-fetch('https://potterapi-fedeperin.vercel.app/pt/spells')
-    .then(res => res.json())
-    .then(json => carregaElementosPagina(json))
+function fetchSpells() {
+    fetch("https://potterapi-fedeperin.vercel.app/pt/spells")
+        .then(response => response.json())
+        .then(data => {
+            console.log("Feitiços carregados:", data); // Debug pra ver os dados
 
-function carregaElementosPagina(json) {
-    const table = document.createElement('div')
-    for(let spells of json) {
-        const feiticoTitle = document.createElement('tr');
-        const feiticoDesc = document.createElement('tr');
+            let container = document.createElement('div');
+            container.classList.add('container');
 
-        let feitico = document.createElement('h3');
-        let desc = document.createElement('p');
-        feitico.innerHTML = spells.spell;
-        desc.innerHTML = spells.use;
-        feiticoTitle.appendChild(feitico);
-        feiticoDesc.appendChild(desc);
+            data.forEach(spell => { 
+                let card = document.createElement('div');
+                card.classList.add('cards');
+                
+                
+                card.innerHTML = `
+                    <h3 id="card-title">${spell.spell}</h3>
+                    <p id="card-p">${spell.use}</p>
+                `;
 
-        table.appendChild(feiticoTitle);
-        table.appendChild(feiticoDesc);
-    }
-    
-    const resultado = document.querySelector('.resultado')
-    resultado.appendChild(table);
-};
+                container.appendChild(card);
+            });
+
+            document.body.appendChild(container);
+        })
+        .catch(error => console.error("Erro ao carregar os feitiços:", error));
+}
+
+// Chamando a função pra carregar os feitiços
+fetchSpells();
