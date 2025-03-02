@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./assets/CSS/style.css" />
     <link type="image/png" sizes="96x96" rel="icon" href="./favicon/deathly-hallows-96-dark.png" />
 
-    <script src="./assets/JS/api.js"></script>
+     <script src="./assets/JS/api.js"></script> 
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- <script src="./assets/JS/api.js"></script> -->
     <title>Mundo HP</title>
@@ -36,6 +36,15 @@
           distinctio illo quis eius tempore.
         </p>
       </div>
+      <div class="cards-filter" id="cardsContainer">
+        <div id="seletor-speels"><a onclick="FiltrarSeletor('speels', 'url(/public/Ollivanders-The-Wizarding-World-of-Harry-Potter.jpg)')" href="#" class="card-filter">SPEELS</a></div>
+      </div>
+      <div>
+        <div id="seletor-potions"><a onclick="FiltrarSeletor('potions', 'url(/public/HP-POTIONS.jpg)')"  href="#" class="card-filter">POTIONS</a></div>
+      </div>
+      <div>
+        <div id="seletor-cards"><a onclick="FiltrarSeletor('cards', 'url(/public/Ollivanders-The-Wizarding-World-of-Harry-Potter.jpg)')" href="#" class="card-filter">CARDS</a></div>
+      </div>
       <!-- <div class="cards">
         <h2 id="card-title">Avada Kedavra</h2>
         <p id="card-p">
@@ -45,6 +54,13 @@
       </div> -->
       <!-- <card-component></card-component> -->
     </section>
+
+    <div id="speels" class="seletor-content">SPEEEEELS</div>
+
+    <div id="potions" class="seletor-content">POTIONS</div>
+
+    <div id="cards" class="seletor-content">CARDS</div>
+    
     <!-- CONTENT-END -->
   </body>
   <script src="/assets/JS/cards.js"></script>
