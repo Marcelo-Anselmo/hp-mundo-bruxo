@@ -68,40 +68,84 @@ header ul {
 
 #content-title {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: bold;
     overflow-wrap: break-word;
     letter-spacing: .7rem;
-    width: 100%;
+    width: 40rem;
+    text-wrap: wrap;
+    text-align: center;
 }
 
-#seletor-speels {
+/* CONTENT-CARDS */
+
+.filter-link1 {
     width: 12rem;
-    height: 33rem;
+    height: 32rem;
     border-radius: 25px 0px 25px 0px;
-    background-color: aqua;
-    color: green;
-    margin-left: 100px;
+    background-color: #28a495;
+    margin-left: 10rem;
     margin-top: 5rem;
+    display: inline-block; 
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    font-size: 2rem;  
+    justify-content: center;
+    padding-top: 15rem;
+    background-image: url('/public/hogwarts-legacy-normal-.jpg');
+    
 }
-#seletor-potions {
+.filter-link2 {
     width: 12rem;
-    height: 33rem;
+    height: 32rem;
     border-radius: 25px 0px 25px 0px;
-    background-color: blueviolet;
-    color: green;
-    margin-left: 7rem;
-    margin-top: 20rem;
-}
-#seletor-cards {
-    width: 12rem;
-    height: 33rem;
-    border-radius: 25px 0px 25px 0px;
-    background-color: aqua;
-    color: green;
-    margin-left: 100px;
+    background-color: #28a495;
+    margin-left: 3rem;
     margin-top: 5rem;
+    display: inline-block; 
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    font-size: 2rem;  
+    justify-content: center;
+    padding-top: 15rem;
+    background-image: url('/public/HP-POTIONS.jpg');
 }
+
+.filter-link3{
+    width: 12rem;
+    height: 32rem;
+    border-radius: 25px 0px 25px 0px;
+    background-color: #28a495;
+    margin-left: 3rem;
+    margin-top: 5rem;
+    display: inline-block; 
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    font-size: 2rem;  
+    justify-content: center;
+    padding-top: 15rem;
+    background-image: url('/public/Ollivanders-The-Wizarding-World-of-Harry-Potter.jpg');
+}
+.filter-link4{
+    width: 12rem;
+    height: 32rem;
+    border-radius: 25px 0px 25px 0px;
+    background-color: #28a495;
+    margin-left: 3rem;
+    margin-top: 5rem;
+    display: inline-block; 
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    font-size: 2rem;  
+    justify-content: center;
+    padding-top: 15rem;
+    background-image: url('/public/Books-bg2.jpg');    
+}
+
+
+
+
+
 
 /* CONTENT-END */
 

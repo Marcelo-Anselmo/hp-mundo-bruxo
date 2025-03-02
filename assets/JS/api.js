@@ -30,27 +30,19 @@ fetchSpells();
 
 
 // filtro dinâmico
-function FiltrarSeletor(contentId, bgImage) {
-    const cardsContainer = document.getElementById('cardsContainer');
-    const contents = document.querySelectorAll('.seletor-content');
+function showContent(contentID, bgImage){
+    const cardsContainerFilter = document.getElementById('cardsContainerFilter');
+    const contents = document.querySelectorAll('.card-filter-content');
 
+    // Esconder todos os conteúdos e os cards
     contents.forEach(content => content.style.display = 'none');
-    if (cardsContainer) {
-        cardsContainer.style.display = 'none';
-    }
+    cardsContainerFilter.style.display = 'none';
 
-    const selectedContent = document.getElementById(contentId);
-    if (selectedContent) {
+    // Exibir o conteúdo selecionado e mudar a imagem de fundo
+    const selectedContent = document.getElementById(contentID);
+    if(selectedContent){
         selectedContent.style.display = 'block';
         document.body.style.backgroundImage = bgImage;
-    } else if (contentId === 'seletor-speels') {
-        // Lógica para exibir feitiços
         fetchSpells();
-    } else if (contentId === 'seletor-potions') {
-        // Lógica para exibir poções
-        fetchPotions();
-    } else if (contentId === 'seletor-cards') {
-        // Lógica para exibir cards
-        fetchCards();
     }
 }
