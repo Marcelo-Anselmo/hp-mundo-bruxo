@@ -27,3 +27,22 @@ function fetchSpells() {
 
 // Chamando a função pra carregar os feitiços
 fetchSpells();
+
+
+// filtro dinâmico
+function showContent(contentID, bgImage){
+    const cardsContainerFilter = document.getElementById('cardsContainerFilter');
+    const contents = document.querySelectorAll('.card-filter-content');
+
+    // Esconder todos os conteúdos e os cards
+    contents.forEach(content => content.style.display = 'none');
+    cardsContainerFilter.style.display = 'none';
+
+    // Exibir o conteúdo selecionado e mudar a imagem de fundo
+    const selectedContent = document.getElementById(contentID);
+    if(selectedContent){
+        selectedContent.style.display = 'block';
+        document.body.style.backgroundImage = bgImage;
+        fetchSpells();
+    }
+}

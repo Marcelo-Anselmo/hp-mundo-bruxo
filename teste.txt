@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      background-color: #f0f0f0;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .cards {
+      display: flex;
+      margin: 20px;
+    }
+
+    .card {
+      width: 150px;
+      height: 200px;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background-color: white;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.1);
+    }
+
+    .card-content {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: white;
+      width: 80%;
+      text-align: center;
+    }
+  </style>
+  <title>Cards com Fundos Diferentes</title>
+</head>
+<body>
+  <div class="cards" id="cardsContainer">
+    <div class="card" onclick="showContent('content1', 'url(https://example.com/imagem1.jpg)')">Card 1</div>
+    <div class="card" onclick="showContent('content2', 'url(https://example.com/imagem2.jpg)')">Card 2</div>
+    <div class="card" onclick="showContent('content3', 'url(https://example.com/imagem3.jpg)')">Card 3</div>
+  </div>
+
+  <div id="content1" class="card-content">Conteúdo do Card 1</div>
+  <div id="content2" class="card-content">Conteúdo do Card 2</div>
+  <div id="content3" class="card-content">Conteúdo do Card 3</div>
+
+  <script>
+    function showContent(contentId, bgImage) {
+      const cardsContainer = document.getElementById('cardsContainer');
+      const contents = document.querySelectorAll('.card-content');
+
+      // Esconder todos os conteúdos e os cards
+      contents.forEach(content => content.style.display = 'none');
+      cardsContainer.style.display = 'none';
+
+      // Exibir o conteúdo selecionado e mudar a imagem de fundo
+      const selectedContent = document.getElementById(contentId);
+      if (selectedContent) {
+        selectedContent.style.display = 'block';
+        document.body.style.backgroundImage = bgImage;
+      }
+    }
+  </script>
+</body>
+</html>
